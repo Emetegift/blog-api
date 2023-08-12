@@ -4,9 +4,9 @@ from django.shortcuts import render
 import json
 from rest_framework.response import Response
 # from django.forms.models import model_to_dict
-# from products.models import Product
+from post.models import Post
 from rest_framework.decorators import api_view
-# from products.serializers import ProductSerializer
+from post.serializers import PostSerializer
 
 
 @api_view(['POST'])
@@ -15,11 +15,11 @@ def api_home(request, *args, **kwargs):
      This is a Django Rest API view
      """
     pass
-    # serializer = ProductSerializer(data=request.data)
-    # if serializer.is_valid():
-    #     # instance = serializer.save()
-    #     print(serializer.data)
-    #     return Response(serializer.data)
+    serializer = PostSerializer(data=request.data)
+    if serializer.is_valid():
+        # instance = serializer.save()
+        print(serializer.data)
+        return Response(serializer.data)
     
 
 

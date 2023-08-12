@@ -37,6 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Third party packages
+    'corsheaders', ## Fors CORS Header configuration
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',
+
+    #Internal  apps
+    'api',
+    'post',
 ]
 
 MIDDLEWARE = [
