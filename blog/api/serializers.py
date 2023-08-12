@@ -1,7 +1,7 @@
 ## General serializer that is link to the post serializer
 from rest_framework import serializers
 
-#For  a user to get his or her  other products
+#For  a user to get his or her  other posts
 class UserPostInlineSerializer(serializers.Serializer):
     url = serializers.HyperlinkedIdentityField(  #This will handle the detail view (retrieve)
         view_name='post-detail',

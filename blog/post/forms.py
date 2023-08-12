@@ -6,6 +6,13 @@ class ProductForms(forms.Model):
     class Meta:
         model =Post
         fields = [
+            " author",
             "title",
-            'content'
+            "subheadings",
+            "introduction",
+            'content',
+            'conclusion',
+
         ]
+
+      

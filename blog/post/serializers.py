@@ -33,15 +33,17 @@ class PostSerializer(serializers.ModelSerializer):
             'owner',
             'url',
             'edit_url',
-            # 'email',
+            'author',
             'pk',
             'title',
-            # 'my_discount',
-            # 'related_product',
-            # # 'my_user_data',
+            'subheadings',
+            'body',
+            'introduction',
+            'conclusion',
             # 'public',
             # 'endpoint',
         ]
+
 
     def  get_my_user_data(self, obj):
         return {
